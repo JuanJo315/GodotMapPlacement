@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://txxkfe7a1427"]
+
+[ext_resource type="Texture2D" uid="uid://hpyopnws0dd8" path="res://assets/TX Tileset Grass.png" id="1_7rkgo"]
+[ext_resource type="Script" path="res://scripts/tile_map.gd" id="2_yty2d"]
+[ext_resource type="PackedScene" uid="uid://de810k8qbn8dk" path="res://Interface.tscn" id="3_tvspg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vd0s0"]
+texture = ExtResource("1_7rkgo")
+texture_region_size = Vector2i(32, 32)
+0:4/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+5:3/0 = 0
+4:3/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_26xd3"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_vd0s0")
+
+[node name="main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_26xd3")
+format = 2
+script = ExtResource("2_yty2d")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_tvspg")]

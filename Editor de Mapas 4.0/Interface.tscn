@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://de810k8qbn8dk"]
+
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="1_4xysv"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_4xysv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Yellow Flower"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "White Flower"
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Grass"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Stone"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Old Stone"
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Degraded Stone"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="YellowFlowerPressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="WhiteFlowerPressed"]
+[connection signal="pressed" from="HBoxContainer/Button6" to="." method="GrassPressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="StonePressed"]
+[connection signal="pressed" from="HBoxContainer/Button4" to="." method="OldStonePressed"]
+[connection signal="pressed" from="HBoxContainer/Button5" to="." method="DegradedStonePressed"]
